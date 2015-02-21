@@ -1,8 +1,8 @@
 <%= form_for @gun do |f| %>
-<% if @beer.errors.any? %>
+<% if @gun.errors.any? %>
 <h2> Errors </h2>
  <ul>
-   <% berr.errors.full_messages.each do |message| %>
+   <% @gun.errors.full_messages.each do |message| %>
    <li> <%= message %></li>
    <% end %>
   </ul>
@@ -19,4 +19,6 @@
 
    <%= f.submit %>
 
-   <%= link_to "Cancel", beers_path %>
+   <%= link_to "Cancel", guns_path %>
+
+   <% end %>
