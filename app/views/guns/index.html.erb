@@ -1,0 +1,13 @@
+<h1> Guns Guns Guns </h1>
+
+<% @guns.each do |g| %>
+</br>
+<%= g.name %>
+</br>
+<%= g.manufacturer %>
+</br>
+<%= g.caliber %>
+</br>
+<%= link_to "Edit", edit_gun_path(g) %> | <%= link_to "Delete", gun_path(g), method: :delete, data: {confirm: "Are You Sure??"}%>
+</br>
+<% end %>
